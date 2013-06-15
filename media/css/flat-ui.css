@@ -404,6 +404,7 @@ you can use the generic selector below, but it's slower:
   margin-bottom: 50px;
   padding: 40px 0;
   text-align: center;
+  word-wrap: break-word;
 }
 .demo-row {
   margin: 0 auto;
@@ -454,6 +455,20 @@ you can use the generic selector below, but it's slower:
   float: left;
   margin-left: 20px;
   width: 580px;
+}
+.demo-content.demo-content-article {
+  font-size: 17.99px;
+}
+.demo-content.demo-content-article p {
+  margin-bottom: 20px;
+}
+.demo-content.demo-content-article ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+.demo-content.demo-content-article li {
+  line-height: 26.985px;
+  padding: 0 0 5px;
 }
 .demo-content-wide {
   clear: both;
