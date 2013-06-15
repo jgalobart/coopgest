@@ -1,13 +1,14 @@
 <div class="row">
 	<div class="span8">
+		<label><?=__('Search product');?> <input type="text" name="search" id="standSearch"/></label>
 		<table class="table table-striped table-hover" id="stand">
 			<thead>
 				<tr>
-					<th>Producte</th>
-					<th>Característiques</th>
-					<th>Preu</th>
-					<th>Quantitat</th>
-					<th>Accions</th>
+					<th><?=__('Product');?></th>
+					<th><?=__('Features');?></th>
+					<th><?=__('Price');?></th>
+					<th><?=__('Quantity');?></th>
+					<th><?=__('Actions');?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -38,8 +39,8 @@
 	<div class="span4">
 		<table class="table table-striped table-hover">
 			<tbody>
-				<tr><td colspan="2">Productes</td><td>36</td></tr>
-				<tr><td colspan="2">Total</td><td>36,45&nbsp;€</td></tr>
+				<tr><td colspan="2"><?=__('Products');?></td><td>36</td></tr>
+				<tr><td colspan="2"><?=__('Total');?></td><td>36,45&nbsp;€</td></tr>
 			</tbody>
 						<thead>
 				<tr>
