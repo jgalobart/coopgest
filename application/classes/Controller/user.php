@@ -21,7 +21,7 @@ class Controller_User extends Controller_Template {
 		$this->template->body = View::factory('user/home');
 
 		$this->template->header = View::factory('common/header');
-		$this->template->header->title = "Leagbox";
+		$this->template->header->title = "CoopGest";
 		$this->template->breadcrumb = View::factory('common/breadcrumb');
 		$this->template->breadcrumb->breadcrumbs = array ('Remenant les cireres'=>'/','Clubs'=>'index/clubs');
 		$this->template->footer = View::factory('common/footer');
@@ -40,9 +40,9 @@ class Controller_User extends Controller_Template {
 		$this->template->body = View::factory('user/index');
 
 		$this->template->header = View::factory('common/header');
-		$this->template->header->title = "Leagbox";
+		$this->template->header->title = "CoopGest";
 		$this->template->breadcrumb = View::factory('common/breadcrumb');
-		$this->template->breadcrumb->breadcrumbs = array ('Leagbox'=>'/','Clubs'=>'index/clubs');
+		$this->template->breadcrumb->breadcrumbs = array ('CoopGest'=>'/','Clubs'=>'index/clubs');
 		$this->template->footer = View::factory('common/footer');
 		if ($user!=NULL) $this->template->menu->user = $this->template->body->user = $user;
 		else $this->template->menu->user = $this->template->body->user = "";
@@ -59,9 +59,9 @@ class Controller_User extends Controller_Template {
 		$this->template->body = View::factory('user/view');
 
 		$this->template->header = View::factory('common/header');
-		$this->template->header->title = "Leagbox";
+		$this->template->header->title = "CoopGest";
 		$this->template->breadcrumb = View::factory('common/breadcrumb');
-		$this->template->breadcrumb->breadcrumbs = array ('Leagbox'=>'/','Users'=>'user');
+		$this->template->breadcrumb->breadcrumbs = array ('CoopGest'=>'/','Users'=>'user');
 		$this->template->footer = View::factory('common/footer');
 
 		if ($user!=NULL) $this->template->menu->user = $user;
@@ -83,9 +83,9 @@ class Controller_User extends Controller_Template {
 		$this->template->body = View::factory('user/list');
 
 		$this->template->header = View::factory('common/header');
-		$this->template->header->title = "Leagbox";
+		$this->template->header->title = "CoopGest";
 		$this->template->breadcrumb = View::factory('common/breadcrumb');
-		$this->template->breadcrumb->breadcrumbs = array ('Leagbox'=>'/','Clubs'=>'index/clubs');
+		$this->template->breadcrumb->breadcrumbs = array ('CoopGest'=>'/','Clubs'=>'index/clubs');
 		$this->template->footer = View::factory('common/footer');
 
 		if ($user!=NULL) $this->template->menu->user = $user;
@@ -132,15 +132,15 @@ class Controller_User extends Controller_Template {
 				$success = Auth_ORM::instance()->login($userdata['username'],$userdata['password']);
 				if ($success) {
 					$to = $userdata['email'];
-					$subject = __("Thanks to register at leagbox");
-					$message = '<p><strong>leagbox</strong></p>';
+					$subject = __("Thanks to register at coopgest");
+					$message = '<p><strong>coopgest</strong></p>';
 					$message .= "<p>".__("This is your account login information:")."</p>";
 					$message .= "<p>".__("email").": ".$userdata['email']."<br />".__("password").": ".$password."</p>";
-					$message .= "<p><strong>".__("leagbox team")."</strong><br />";
-					$message .= "leagbox@leagbox.com"."</p>";
+					$message .= "<p><strong>".__("coopgest team")."</strong><br />";
+					$message .= "coopgest@galu.cat"."</p>";
 					$headers = 'MIME-Version: 1.0' . "\r\n";
 					$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-					$headers .= "From: leagbox <leagbox@leagbox.com>";
+					$headers .= "From: coopgest <coopgest@galu.vat>";
 					echo $mail = mail($to,$subject,$message,$headers);echo $message;
 					$this->redirect(URL::site('user/home'));
 					}
@@ -162,9 +162,9 @@ class Controller_User extends Controller_Template {
 		$this->template->body = View::factory('user/signup');
 
 		$this->template->header = View::factory('common/header');
-		$this->template->header->title = "Leagbox";
+		$this->template->header->title = "CoopGest";
 		$this->template->breadcrumb = View::factory('common/breadcrumb');
-		$this->template->breadcrumb->breadcrumbs = array ('Leagbox'=>'/','Clubs'=>'index/clubs');
+		$this->template->breadcrumb->breadcrumbs = array ('CoopGest'=>'/','Clubs'=>'index/clubs');
 		$this->template->footer = View::factory('common/footer');
 		if (isset($user) && $user!=NULL) $this->template->menu->user = $user;
 		else $this->template->menu->user = "";
@@ -208,9 +208,9 @@ class Controller_User extends Controller_Template {
 					}*/
 
 			$this->template->header = View::factory('common/header');
-			$this->template->header->title = "Leagbox";
+			$this->template->header->title = "CoopGest";
 			$this->template->breadcrumb = View::factory('common/breadcrumb');
-			$this->template->breadcrumb->breadcrumbs = array ('Leagbox'=>'/','Clubs'=>'index/clubs');
+			$this->template->breadcrumb->breadcrumbs = array ('CoopGest'=>'/','Clubs'=>'index/clubs');
 			$this->template->footer = View::factory('common/footer');
 			if ($user!=NULL) $this->template->menu->user = $this->template->body->user = $user;
 			else $this->template->menu->user = $this->template->body->user = "";
@@ -220,9 +220,9 @@ class Controller_User extends Controller_Template {
 			$this->template->body = View::factory('user/forgot');
 
 			$this->template->header = View::factory('common/header');
-			$this->template->header->title = "Leagbox";
+			$this->template->header->title = "CoopGest";
 			$this->template->breadcrumb = View::factory('common/breadcrumb');
-		$this->template->breadcrumb->breadcrumbs = array ('Leagbox'=>'/','Clubs'=>'index/clubs');
+		$this->template->breadcrumb->breadcrumbs = array ('CoopGest'=>'/','Clubs'=>'index/clubs');
 			$this->template->footer = View::factory('common/footer');
 			if ($user!=NULL) $this->template->menu->user = $this->template->body->user = $user;
 			else $this->template->menu->user = $this->template->body->user = "";
