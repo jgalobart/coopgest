@@ -8,5 +8,5 @@
 <?=HTML::style('media/css/prettify.css');?>
 <?=HTML::style('media/css/flat-ui.css');?>
 <?=HTML::style('media/css/font-awesome.min.css');?>
-<?=HTML::style('media/css/cireres.css');?>
+<?=HTML::style('media/css/coopgest.css');?>
 </head>

@@ -1,5 +1,0 @@
-table#stand thead { display:block; margin:0px; cell-spacing:0px; left:0px;}
-table#stand tbody { display:block; overflow:auto; height:450px; }
-
-table#order thead { display:block; margin:0px; cell-spacing:0px; left:0px;}
-table#order tbody { display:block; overflow:auto; height:350px; }
