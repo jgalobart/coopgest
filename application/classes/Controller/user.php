@@ -15,7 +15,7 @@ class Controller_User extends Controller_Template {
 
 		//Redirect if user
 		$user = Auth_ORM::instance()->get_user();
-		if ($user) $this->redirect('user/index');
+		if ($user) $this->redirect('order/view');
 
 		$this->template->menu = View::factory('common/menu');
 		$this->template->body = View::factory('user/home');
@@ -23,7 +23,7 @@ class Controller_User extends Controller_Template {
 		$this->template->header = View::factory('common/header');
 		$this->template->header->title = "CoopGest";
 		$this->template->breadcrumb = View::factory('common/breadcrumb');
-		$this->template->breadcrumb->breadcrumbs = array ('Remenant les cireres'=>'/','Clubs'=>'index/clubs');
+		$this->template->breadcrumb->breadcrumbs = array ('');
 		$this->template->footer = View::factory('common/footer');
 		if ($user!=NULL) $this->template->menu->user = $user;
 		else $this->template->menu->user = "";

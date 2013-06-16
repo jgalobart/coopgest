@@ -6,10 +6,12 @@ class Controller_Order extends Controller_Template {
 
 	public function action_view()
 	{
+		//Security
+		$user = Auth_ORM::instance()->get_user();
+		if (!$user) $this->redirect(Route::get('default')->uri());
+
 		$this->template->menu = View::factory('common/menu');
 		$this->template->body = View::factory('order/view');
-
-		$club = ORM::factory('order',$this->request->param('id'));
 
 		$this->template->header = View::factory('common/header');
 		$this->template->header->title = "Remenant les cireres";

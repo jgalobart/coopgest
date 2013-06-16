@@ -1,6 +1,6 @@
 			<tbody>
-				<tr><td colspan="2"><?=__('Products');?></td><td>36</td></tr>
-				<tr><td colspan="2"><?=__('Total');?></td><td>36,45&nbsp;€</td></tr>
+				<tr><td colspan="2"><?=__('Products');?></td><td><?=$lines?></td></tr>
+				<tr><td colspan="2"><?=__('Total');?></td><td><?=$total?> €</td></tr>
 			</tbody>
 						<thead>
 				<tr>

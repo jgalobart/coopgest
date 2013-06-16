@@ -4,11 +4,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?for ($i=1;$i<20;$i++) {?>
+				<?foreach ($lines as $line) {?>
 				<tr>
-					<td>BLEDA ECO Molt maques i tendres.</td>
-					<td>x3</td>
-					<td>7,80&nbsp;€</td>
+					<td><?=$line['product']?></td>
+					<td>x<?=$line['quantity']?></td>
+					<td><?=$line['price']?>&nbsp;€</td>
 					<td><?=HTML::anchor('','<i class="fui-cross"></i>');?></td>
 				</tr>
 				<?}?>

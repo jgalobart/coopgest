@@ -15,8 +15,9 @@
             </ul>
               <?if ($user) {?>
                 <ul class="nav pull-right">
+                  <li><a>Familia: <?=$user->id?></a></li>
                   <li><a><?=$user->email?></a></li>
-                  <li><?=HTML::anchor('message/list','<span class="iconbar-unread">19</span>',array('class'=>'fui-mail'))?></li>
+                  <?/*<li><?=HTML::anchor('message/list','<span class="iconbar-unread">19</span>',array('class'=>'fui-mail'))?></li>*/?>
                   <li><?=HTML::anchor('user/logout','',array('class'=>'fui-exit'))?></li>
                 </ul>
               <?}?>

@@ -27,10 +27,18 @@ $(function(){
 	$('td.col_actions a.btn').click(function(e){
 		e.preventDefault();
 		var p = $(this).attr('id').substring(1);
-		console.log (p); //get product ID
-		console.log ($('#q'+p).val()); //get quantity
-		$('#orderSummary').load('/cooperativa/index.php/ajax/orderSummary');
-		$('#orderDetails').load('/cooperativa/index.php/ajax/orderDetails');
+		var q = $('#q'+p).val(); //get quantity
+		if ($('#q'+p).val()>0) {
+			var jqxhr = $.get('/cooperativa/index.php/ajax/addProduct?p='+p+'&q='+q,function(){
+				$('#orderSummary').load('/cooperativa/index.php/ajax/orderSummary');
+				$('#orderDetails').load('/cooperativa/index.php/ajax/orderDetails');	
+			})
+			//.done(function() { alert("second success"); })
+			//.fail(function() { alert("error"); })
+			//.always(function() { alert("finished"); })
+			;
+			
+			}
 		});	
 	
 	//filter stand

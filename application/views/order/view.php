@@ -13,7 +13,7 @@
 			</thead>
 			<tbody>
 				<?foreach ($categories as $category) {
-					$products_cat=$products->where('category','=',$category->id)->limit(2)->find_all();
+					$products_cat=$products->where('category','=',$category->id)->find_all();
 					?>
 				<tr class="category-<?=$category->id;?>"><th colspan="5"><i class="fui-triangle-right-large"></i><?=$category->category;?> (<?=sizeof($products_cat)?>)</th></tr>
 				<?foreach ($products_cat as $product) {?>
@@ -26,7 +26,7 @@
 						<td class="col_price"><?=$product->price?>&nbsp;€/Kg</td>
 						<td class="col_quantity">
  							<?//=FORM::input('quantity',0);?>
- 							<input type="text" id="q<?=$product->id;?>" placeholder="" value="0" class="spinner">
+ 							<input type="text" id="q<?=$product->id;?>" placeholder="" value="0" class="spinner"> Kg
 						</td>
 						<td class="col_actions"><a href="" id="p<?=$product->id;?>" class="btn btn-block btn-primary"><i class="fui-plus"></i>Afegir</a></td>
 					</tr>
