@@ -6,10 +6,9 @@
 			<tbody>
 				<?foreach ($lines as $line) {?>
 				<tr>
-					<td><?=$line['product']?></td>
-					<td>x<?=$line['quantity']?></td>
-					<td><?=$line['price']?>&nbsp;€</td>
-					<td><?=HTML::anchor('','<i class="fui-cross"></i>');?></td>
+					<td><strong><?=$line['product']?></strong><br />x<?=$line['quantity']?></td>
+					<td><br /><?=$line['price']*$line['quantity']?>&nbsp;€</td>
+					<td><br /><?=HTML::anchor('','<i class="fui-cross"></i>');?></td>
 				</tr>
 				<?}?>
 			</tbody>

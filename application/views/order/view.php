@@ -1,6 +1,15 @@
 <div class="row">
+	<div class="span8"><label><?=__('Search product');?> <input type="text" name="search" id="standSearch"/></label></div>
+	<div class="span4">
+		<select>
+			<?for ($i=1;$i<53;$i++){?>
+				<option>Familia <?=$i?></option>
+			<?}?>
+		</select>
+	</div>
+</div>
+<div class="row">
 	<div class="span8">
-		<label><?=__('Search product');?> <input type="text" name="search" id="standSearch"/></label>
 		<table class="table table-striped table-hover" id="stand">
 			<thead>
 				<tr>

@@ -10,8 +10,9 @@
           <?=HTML::anchor('user/index',__('Remenant les cireres'),array("class"=>"brand"))?>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><?=HTML::anchor('league/list',__('Productes'))?></li>
-              <li><?=HTML::anchor('club/list',__('Comandes'))?></li>
+              <li><?=HTML::anchor('week/list',__('Setmanes'))?></li>
+              <li><?=HTML::anchor('order/list',__('Comandes'))?></li>
+              <li><?=HTML::anchor('order/list',__('Productes'))?></li>
             </ul>
               <?if ($user) {?>
                 <ul class="nav pull-right">
