@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct access allowed.');
 
-class Model_Product extends ORM
+class Model_Provider extends ORM
 {
 public function rules()
         {
@@ -8,8 +8,8 @@ public function rules()
 	}
 
 	//relationships
-	protected $_belongs_to = array(
-		'providers' => array(),
+	protected $_has_many = array(
+		'products'  => array(),
 	);
 	
 }

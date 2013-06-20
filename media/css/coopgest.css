@@ -8,3 +8,8 @@ table#stand .col_actions {width:50px;}
 
 table#orderDetails thead { display:block; margin:0px; cell-spacing:0px; left:0px;}
 table#orderDetails tbody { display:block; overflow:auto; height:350px; }
+
+table#replenishment td.col_families {width:500px;}
+table#replenishment td.col_families label {float:left;margin-right:1em;}
+table#replenishment td.col_actions {width:120px;}
+table#replenishment td.col_total {width:120px;}

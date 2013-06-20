@@ -9,20 +9,23 @@
 						<td><?=$week->end?></td>
 						<td>
 							<?switch ($week->status) : case 1 : ?>
-								<a class="btn btn-mini btn-primary btn-danger" title="tancar setmana"><i class="fui-pause"></i></a>
+								<a class="btn btn-mini btn-primary btn-danger" title="tancar comandes"><i class="fui-pause"></i></a>
 								<a class="btn btn-mini disabled" title="fer comanda proveidors"><i class="fui-mail"></i></a>
 								<a class="btn btn-mini disabled" title="revisar stock"><i class="fui-tag"></i></a>
 								<a class="btn btn-mini disabled" title="repostar"><i class="fui-exit"></i></a>
+								<a class="btn btn-mini disabled" title="tancar setmana"><i class="fui-cross"></i></a>
 							<? break; case 2: ?>
-								<a class="btn btn-mini disabled" title="tancar setmana"><i class="fui-pause"></i></a>
+								<a class="btn btn-mini disabled" title="tancar comandes"><i class="fui-pause"></i></a>
 								<a class="btn btn-mini btn-primary btn-inverse" title="fer comanda proveidors"><i class="fui-mail"></i></a>
 								<a class="btn btn-mini btn-primary btn-inverse" title="revisar stock"><i class="fui-tag"></i></a>
 								<a class="btn btn-mini btn-primary btn-inverse" title="repostar"><i class="fui-exit"></i></a>
+								<a class="btn btn-mini btn-primary btn-danger" title="tancar setmana"><i class="fui-cross"></i></a>
 							<? break; case 3: ?>
-								<a class="btn btn-mini disabled" title="tancar setmana"><i class="fui-pause"></i></a>
+								<a class="btn btn-mini disabled" title="tancar comandes"><i class="fui-pause"></i></a>
 								<a class="btn btn-mini disabled" title="fer comanda proveidors"><i class="fui-mail"></i></a>
 								<a class="btn btn-mini disabled" title="revisar stock"><i class="fui-tag"></i></a>
 								<a class="btn btn-mini disabled" title="repostar"><i class="fui-exit"></i></a>
+								<a class="btn btn-mini disabled" title="tancar setmana"><i class="fui-cross"></i></a>
 							<? endswitch;?>
 						</td>
 					</tr>
@@ -45,5 +48,6 @@
 		<p><a class="btn btn-mini btn-primary btn-inverse"><i class="fui-mail"></i></a> fer comanda proveidors</p>
 		<p><a class="btn btn-mini btn-primary btn-inverse"><i class="fui-tag"></i></a> revisar stock</p>
 		<p><a class="btn btn-mini btn-primary btn-inverse"><i class="fui-exit"></i></a> repostar</p>
+		<p><a class="btn btn-mini btn-primary btn-danger"><i class="fui-cross"></i></a> tancar setmana</p>
 	</div>
 </div>

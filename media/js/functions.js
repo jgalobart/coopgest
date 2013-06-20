@@ -12,6 +12,7 @@ $(document).ready(function() {
 	init_stand();	//init order stand
 	$('#orderSummary').load('/cooperativa/index.php/ajax/orderSummary');
 	$('#orderDetails').load('/cooperativa/index.php/ajax/orderDetails');
+	$(".tagsinput").tagsInput();
 });
 
 $(function(){
